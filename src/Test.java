@@ -1,6 +1,4 @@
 
-import java.io.File;
-import java.io.InputStream;
 import java.util.Scanner;
 public class Test {
     public  static void main(String[] args) throws ClassNotFoundException {
@@ -15,7 +13,7 @@ public class Test {
             System.out.println("请输入密码：" + password);
             //File file =new File("C:\\Users\\ASUS\\Desktop\\consolseshop\\src\\User.xlsx");
             java.io.InputStream in = Class.forName("Test").getResourceAsStream("/User.xlsx");
-            ReadExcel readExcel = new ReadExcel();
+            ReadUserExcel readExcel = new ReadUserExcel();
             User users[] = readExcel.readExcel(in);
             for (int i = 0; i < users.length; i++) {
 
